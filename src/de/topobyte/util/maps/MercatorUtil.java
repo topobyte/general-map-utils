@@ -46,9 +46,10 @@ public class MercatorUtil
 	 *            the zoom level at which the resolution should be calculated.
 	 * @return the ground resolution at the given latitude and zoom level.
 	 */
-	public static double calculateGroundResolution(double lat, int zoom)
+	public static double calculateGroundResolution(double lat, int zoom,
+			int tileSize)
 	{
 		return Math.cos(lat * (Math.PI / 180)) * EARTH_CIRCUMFERENCE
-				/ ((long) 256 << zoom);
+				/ ((long) tileSize << zoom);
 	}
 }
