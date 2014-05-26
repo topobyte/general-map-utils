@@ -30,9 +30,9 @@
 	<target name="compile" depends="init" description="compile the source ">
 		<javac srcdir="${src}" destdir="${build}" debug="on" debuglevel="lines,vars,source" includeantruntime="false">
 			<classpath>
-				<fileset dir="${lib}">
+				<!--fileset dir="${lib}">
 					<include name="*.jar" />
-				</fileset>
+				</fileset-->
 			</classpath>
 		</javac>
 	</target>
@@ -46,6 +46,12 @@
 	<target name="dist" depends="compile" description="generate the distribution">
 		<jar jarfile="${dist}/general-map-utils.jar" basedir="${build}">
 		</jar>
+	</target>
+
+	<target name="clean" description="clean up">
+		<delete dir="${build}" />
+		<delete dir="${dist}" />
+		<delete dir="${doc}" />
 	</target>
 	
 </project>
