@@ -49,7 +49,23 @@ public class MercatorUtil
 	public static double calculateGroundResolution(double lat, int zoom,
 			int tileSize)
 	{
+		long worldsize = (long) tileSize << zoom;
 		return Math.cos(lat * (Math.PI / 180)) * EARTH_CIRCUMFERENCE
-				/ ((long) tileSize << zoom);
+				/ worldsize;
 	}
+
+	public static double calculateGroundResolution(double lat, double zoom,
+			int tileSize)
+	{
+		double worldsize = tileSize * Math.pow(2, zoom);
+		return Math.cos(lat * (Math.PI / 180)) * EARTH_CIRCUMFERENCE
+				/ worldsize;
+	}
+
+	public static double calculateGroundResolution(double lat, double worldsize)
+	{
+		return Math.cos(lat * (Math.PI / 180)) * EARTH_CIRCUMFERENCE
+				/ worldsize;
+	}
+
 }
