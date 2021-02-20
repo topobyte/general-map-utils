@@ -32,7 +32,7 @@ public class MercatorUtil
 {
 
 	/**
-	 * The circumference of the earth at the equator in meter.
+	 * The circumference of the earth at the equator in meters.
 	 */
 	private static final double EARTH_CIRCUMFERENCE = 40075016.686;
 
