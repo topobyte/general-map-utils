@@ -24,7 +24,7 @@ public class MapScaleChecker
 {
 
 	// possible values in meters
-	private List<Integer> values = new ArrayList<Integer>();
+	private List<Integer> values = new ArrayList<>();
 
 	private int maxPixels;
 
@@ -57,4 +57,5 @@ public class MapScaleChecker
 	{
 		this.maxPixels = maxPixels;
 	}
+
 }
