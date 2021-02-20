@@ -53,8 +53,7 @@ public class MercatorUtil
 			int tileSize)
 	{
 		long worldsize = (long) tileSize << zoom;
-		return Math.cos(lat * (Math.PI / 180)) * EARTH_CIRCUMFERENCE
-				/ worldsize;
+		return calculateGroundResolution(lat, worldsize);
 	}
 
 	/**
@@ -74,8 +73,7 @@ public class MercatorUtil
 			int tileSize)
 	{
 		double worldsize = tileSize * Math.pow(2, zoom);
-		return Math.cos(lat * (Math.PI / 180)) * EARTH_CIRCUMFERENCE
-				/ worldsize;
+		return calculateGroundResolution(lat, worldsize);
 	}
 
 	/**
