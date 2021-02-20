@@ -45,6 +45,8 @@ public class MercatorUtil
 	 *            calculated.
 	 * @param zoom
 	 *            the zoom level at which the resolution should be calculated.
+	 * @param tileSize
+	 *            the size of tiles for calculating the world size
 	 * @return the ground resolution at the given latitude and zoom level.
 	 */
 	public static double calculateGroundResolution(double lat, int zoom,
