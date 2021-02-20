@@ -28,14 +28,15 @@ public class MapScaleBar
 		this.pixels = pixels;
 		this.meters = meters;
 	}
-	
+
 	public int getPixels()
 	{
 		return pixels;
 	}
-	
+
 	public int getMeters()
 	{
 		return meters;
 	}
+
 }

@@ -30,6 +30,7 @@ package de.topobyte.util.maps;
  */
 public class MercatorUtil
 {
+
 	/**
 	 * The circumference of the earth at the equator in meter.
 	 */
